@@ -1,11 +1,11 @@
 Summary:	Nautilus context menu for sending files
 Name:		nautilus-sendto
-Version:	3.8.0
+Version:	3.8.1
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/nautilus-sendto/3.8/%{name}-%{version}.tar.xz
-# Source0-md5:	d0d2464b5d200ec914e127640c316ecb
+# Source0-md5:	04467f3257203d70bfd0259dc6089544
 URL:		http://www.es.gnome.org/~telemaco/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -23,7 +23,7 @@ files via other desktop applications.
 %setup -q
 
 # kill gnome common deps
-sed -i -e 's/GNOME_COMPILE_WARNINGS.*//g'	\
+%{__sed} -i -e 's/GNOME_COMPILE_WARNINGS.*//g'	\
     -i -e 's/GNOME_MAINTAINER_MODE_DEFINES//g'	\
     -i -e 's/GNOME_COMMON_INIT//g'		\
     -i -e 's/GNOME_CXX_WARNINGS.*//g'		\
